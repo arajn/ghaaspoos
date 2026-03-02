@@ -6,6 +6,9 @@ theme = "PaperMod"
 [author]
   name = "Raj"
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
   page = ["HTML"]
