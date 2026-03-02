@@ -1,0 +1,14 @@
+baseURL = 'https://www.ghaaspoos.com'
+languageCode = 'en-us'
+title = 'Ghaaspoos'
+theme = "PaperMod"
+
+[author]
+  name = "Raj"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
