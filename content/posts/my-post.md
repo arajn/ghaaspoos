@@ -1,11 +1,10 @@
 +++
-title = 'My Post Title'
+title = 'Anthropic vs Pentagon'
 date = 2026-03-02
 draft = false
 +++
 
 <!-- paste your HTML here -->
-<div class="my-content">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -559,5 +558,3 @@ draft = false
 
 </body>
 </html>
-
-</div>
