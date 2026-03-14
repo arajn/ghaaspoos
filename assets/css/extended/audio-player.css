@@ -1,0 +1,83 @@
+/* ============================================
+   GHAASPOOS - Audio Player Styling
+   ============================================ */
+
+.audio-player {
+    background: linear-gradient(135deg, var(--grass-dark) 0%, var(--grass-medium) 100%);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 20px 0 30px 0;
+    box-shadow: 0 4px 15px rgba(27, 94, 32, 0.3);
+}
+
+.audio-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.audio-icon {
+    font-size: 1.4rem;
+}
+
+.audio-title {
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.audio-player audio {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Custom audio player styling for webkit browsers */
+.audio-player audio::-webkit-media-controls-panel {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+}
+
+.audio-player audio::-webkit-media-controls-play-button {
+    background-color: var(--grass-vibrant);
+    border-radius: 50%;
+}
+
+.audio-player audio::-webkit-media-controls-current-time-display,
+.audio-player audio::-webkit-media-controls-time-remaining-display {
+    color: var(--grass-dark);
+}
+
+/* Dark mode adjustments */
+:root[data-theme="dark"] .audio-player {
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+:root[data-theme="dark"] .audio-player audio::-webkit-media-controls-panel {
+    background: rgba(46, 125, 50, 0.9);
+}
+
+:root[data-theme="dark"] .audio-player audio::-webkit-media-controls-current-time-display,
+:root[data-theme="dark"] .audio-player audio::-webkit-media-controls-time-remaining-display {
+    color: #c5e1a5;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .audio-player {
+        padding: 12px 15px;
+        margin: 15px 0 25px 0;
+    }
+
+    .audio-header {
+        margin-bottom: 10px;
+    }
+
+    .audio-title {
+        font-size: 0.9rem;
+    }
+}

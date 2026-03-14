@@ -1,0 +1,12 @@
+{{ if .Params.audio }}
+<div class="audio-player">
+    <div class="audio-header">
+        <span class="audio-icon">🎧</span>
+        <span class="audio-title">Listen to this article</span>
+    </div>
+    <audio controls preload="metadata">
+        <source src="{{ .Params.audio }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+{{ end }}

@@ -29,7 +29,7 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          pip install anthropic
+          pip install anthropic google-cloud-texttospeech
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -40,6 +40,7 @@ jobs:
       - name: Generate article with Claude
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_TTS_CREDENTIALS: ${{ secrets.GOOGLE_TTS_CREDENTIALS }}
         run: |
           python scripts/generate_article.py
 
