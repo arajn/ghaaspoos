@@ -83,3 +83,25 @@ body {
     background: var(--grass-light);
     color: var(--primary);
 }
+
+/* ============================================
+   Home Info Section - Reduce spacing
+   ============================================ */
+
+.first-entry {
+    min-height: auto !important;
+    padding: 40px 0 !important;
+    margin-bottom: 20px !important;
+}
+
+.first-entry .entry-content {
+    margin: 10px 0 0 0 !important;
+}
+
+.home-info {
+    padding: 30px 0 !important;
+}
+
+.home-info .entry-content {
+    margin-top: 10px !important;
+}
