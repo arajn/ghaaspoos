@@ -3,7 +3,7 @@ date = '2026-03-14T17:01:05+00:00'
 draft = false
 title = "The New Cold War Runs on Silicon"
 tags = ['technology']
-audio = "/audio/the-new-cold-war-runs-on-silicon.mp3"
+audioFile = "/audio/the-new-cold-war-runs-on-silicon.mp3"
 +++
 
 The world's most powerful nations are currently engaged in the most consequential resource war since oil defined the 20th century. But this time, it's not about black gold pumped from desert sands—it's about silicon wafers thinner than human hair, manufactured in a handful of facilities that could fit inside a few city blocks.

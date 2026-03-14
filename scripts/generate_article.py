@@ -268,7 +268,7 @@ def create_post_file(title: str, content: str, category: str, audio_path: str | 
     escaped_title = title.replace("'", "''")
 
     # Add audio path to frontmatter if available
-    audio_line = f'\naudio = "{audio_path}"' if audio_path else ""
+    audio_line = f'\naudioFile = "{audio_path}"' if audio_path else ""
 
     frontmatter = f"""+++
 date = '{date_str}'
