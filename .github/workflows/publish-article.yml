@@ -6,7 +6,16 @@ on:
     - cron: '0 13 * * *'
     # Run at 6 PM EST (23:00 UTC) - Evening article
     - cron: '0 23 * * *'
-  workflow_dispatch:  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Custom topic for the article (leave empty for random)'
+        required: false
+        default: ''
+      category:
+        description: 'Category (geopolitics, technology, finance)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -41,6 +50,8 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GOOGLE_TTS_CREDENTIALS: ${{ secrets.GOOGLE_TTS_CREDENTIALS }}
+          CUSTOM_TOPIC: ${{ github.event.inputs.topic }}
+          CUSTOM_CATEGORY: ${{ github.event.inputs.category }}
         run: |
           python scripts/generate_article.py
 

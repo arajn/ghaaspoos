@@ -88,10 +88,20 @@ def generate_article():
     """Generate a new article using Claude API."""
     client = anthropic.Anthropic()
 
-    # Pick a random topic and prompt
-    topic = random.choice(TOPICS)
-    prompt = random.choice(topic["prompts"])
-    category = topic["category"]
+    # Check for custom topic from environment (WhatsApp/OpenClaw trigger)
+    custom_topic = os.environ.get("CUSTOM_TOPIC", "").strip()
+    custom_category = os.environ.get("CUSTOM_CATEGORY", "").strip()
+
+    if custom_topic:
+        # Use custom topic from WhatsApp
+        prompt = f"Write about: {custom_topic}"
+        category = custom_category if custom_category in ["geopolitics", "technology", "finance"] else "geopolitics"
+        print(f"Using custom topic: {custom_topic}")
+    else:
+        # Pick a random topic and prompt
+        topic = random.choice(TOPICS)
+        prompt = random.choice(topic["prompts"])
+        category = topic["category"]
 
     # Generate the article content
     response = client.messages.create(
