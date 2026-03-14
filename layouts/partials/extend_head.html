@@ -20,10 +20,16 @@ document.addEventListener('DOMContentLoaded', function() {
         textSpan.className = 'logo-text';
         textSpan.textContent = 'GhaasPoos';
 
+        // Create tagline span
+        const taglineSpan = document.createElement('span');
+        taglineSpan.className = 'logo-tagline';
+        taglineSpan.textContent = '- Grassroots intel';
+
         // Clear and rebuild logo
         logoLink.innerHTML = '';
         logoLink.appendChild(grassContainer);
         logoLink.appendChild(textSpan);
+        logoLink.appendChild(taglineSpan);
     }
 });
 </script>

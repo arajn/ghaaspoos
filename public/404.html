@@ -10,7 +10,7 @@
 <meta name="description" content="A fresh perspective on geopolitics, technology, and finance">
 <meta name="author" content="">
 <link rel="canonical" href="https://www.ghaaspoos.com/404.html">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.f3be862abd4bfd53c5f4e6eddf2c7eb128acdcbe558cfb87ac45f1a946036d8c.css" integrity="sha256-876GKr1L/VPF9Obt3yx&#43;sSis3L5VjPuHrEXxqUYDbYw=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.db106c1049c9b31bb1988acecb57fe151d06725d2e34ceb5b0db7a6eefcd34dc.css" integrity="sha256-2xBsEEnJsxuxmIrOy1f&#43;FR0Gcl0uNM61sNt6bu/NNNw=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.ghaaspoos.com/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.ghaaspoos.com/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.ghaaspoos.com/favicon-32x32.png">
@@ -56,9 +56,15 @@ document.addEventListener('DOMContentLoaded', function() {
         textSpan.textContent = 'GhaasPoos';
 
         
+        const taglineSpan = document.createElement('span');
+        taglineSpan.className = 'logo-tagline';
+        taglineSpan.textContent = '- Grassroots intel';
+
+        
         logoLink.innerHTML = '';
         logoLink.appendChild(grassContainer);
         logoLink.appendChild(textSpan);
+        logoLink.appendChild(taglineSpan);
     }
 });
 </script>

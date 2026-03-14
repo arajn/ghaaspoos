@@ -76,6 +76,39 @@
     }
 }
 
+/* Tagline styling */
+.logo-tagline {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #c5e1a5;
+    opacity: 0;
+    animation: fadeInTagline 0.8s ease-out 2s forwards;
+    font-style: italic;
+    margin-left: 4px;
+}
+
+@keyframes fadeInTagline {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 0.9;
+        transform: translateX(0);
+    }
+}
+
+:root[data-theme="dark"] .logo-tagline {
+    color: #aed581;
+}
+
+/* Hide tagline on mobile */
+@media (max-width: 600px) {
+    .logo-tagline {
+        display: none;
+    }
+}
+
 /* Sway animation on hover */
 .logo:hover .grass-blade {
     animation: swayGrass 0.5s ease-in-out infinite alternate;
