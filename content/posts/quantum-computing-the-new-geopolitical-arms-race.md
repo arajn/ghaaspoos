@@ -1,5 +1,5 @@
 +++
-date = '2026-03-14T16:13:08-05:00'
+date = '2026-03-14T10:00:00-05:00'
 draft = false
 title = "Quantum Computing: The New Geopolitical Arms Race"
 tags = ['technology']

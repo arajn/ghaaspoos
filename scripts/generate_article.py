@@ -112,9 +112,13 @@ def create_post_file(title: str, content: str, category: str):
     slug = '-'.join(slug.split())
     slug = slug[:50]  # Limit length
 
-    # Get current timestamp
-    now = datetime.now()
-    date_str = now.strftime("%Y-%m-%dT%H:%M:%S-05:00")
+    # Get current timestamp in UTC, then format as UTC
+    # Using a past time ensures Hugo always builds the post
+    from datetime import timezone
+    now = datetime.now(timezone.utc)
+    # Subtract 1 hour to ensure it's always in the past
+    past_time = now.replace(hour=max(0, now.hour - 1))
+    date_str = past_time.strftime("%Y-%m-%dT%H:%M:%S+00:00")
 
     # Create frontmatter - escape single quotes in title
     escaped_title = title.replace("'", "''")
