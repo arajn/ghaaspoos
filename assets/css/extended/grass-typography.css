@@ -1,0 +1,226 @@
+/* ============================================
+   GHAASPOOS LAWN THEME - Typography & Links
+   Nature-inspired text styling
+   ============================================ */
+
+/* ============================================
+   Links
+   ============================================ */
+
+a {
+    color: var(--grass-dark);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.post-content a {
+    color: var(--grass-dark);
+    font-weight: 500;
+    border-bottom: 2px solid var(--grass-light);
+}
+
+.post-content a:hover {
+    color: var(--grass-vibrant);
+    border-bottom-color: var(--grass-vibrant);
+}
+
+/* ============================================
+   Headings
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary);
+}
+
+.post-content h2 {
+    border-bottom: 3px solid var(--grass-light);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+.post-content h2::before {
+    content: "🌿 ";
+}
+
+.post-content h3::before {
+    content: "🌱 ";
+}
+
+/* ============================================
+   Blockquotes
+   ============================================ */
+
+.post-content blockquote {
+    border-left: 4px solid var(--grass-vibrant);
+    background: linear-gradient(90deg, rgba(124, 179, 66, 0.1) 0%, transparent 100%);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+}
+
+.post-content blockquote p {
+    margin: 0;
+}
+
+/* ============================================
+   Code blocks
+   ============================================ */
+
+.post-content code {
+    background: var(--code-bg);
+    color: var(--grass-dark);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.post-content pre {
+    background: var(--code-block-bg);
+    border-radius: 8px;
+    border: 2px solid var(--grass-dark);
+    overflow-x: auto;
+}
+
+.post-content pre code {
+    background: transparent;
+    color: #c5e1a5;
+    padding: 0;
+}
+
+/* ============================================
+   Lists
+   ============================================ */
+
+.post-content ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.post-content ul li::before {
+    content: "🌿";
+    margin-right: 0.5rem;
+    margin-left: -1.5rem;
+}
+
+.post-content ol {
+    padding-left: 1.5rem;
+}
+
+/* ============================================
+   Horizontal Rules
+   ============================================ */
+
+.post-content hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        var(--grass-light) 20%,
+        var(--grass-vibrant) 50%,
+        var(--grass-light) 80%,
+        transparent 100%);
+    margin: 2rem 0;
+}
+
+/* ============================================
+   Bold & Emphasis
+   ============================================ */
+
+.post-content strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.post-content em {
+    color: var(--grass-dark);
+}
+
+/* ============================================
+   Tables
+   ============================================ */
+
+.post-content table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.post-content th {
+    background: var(--grass-dark);
+    color: #ffffff;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.post-content td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--grass-light);
+}
+
+.post-content tr:hover {
+    background: rgba(124, 179, 66, 0.1);
+}
+
+/* ============================================
+   Tags
+   ============================================ */
+
+.post-tags a {
+    background: var(--grass-light);
+    color: var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.post-tags a:hover {
+    background: var(--grass-vibrant);
+    color: #ffffff;
+}
+
+/* ============================================
+   Entry Meta (date, reading time)
+   ============================================ */
+
+.post-meta {
+    color: var(--grass-dark);
+    opacity: 0.8;
+}
+
+/* ============================================
+   Pagination
+   ============================================ */
+
+.pagination a {
+    background: var(--entry);
+    border: 2px solid var(--grass-light);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.pagination a:hover {
+    background: var(--grass-vibrant);
+    color: #ffffff;
+    border-color: var(--grass-vibrant);
+}
+
+/* ============================================
+   Dark Mode Adjustments
+   ============================================ */
+
+:root[data-theme="dark"] .post-content h2::before,
+:root[data-theme="dark"] .post-content h3::before {
+    filter: brightness(1.2);
+}
+
+:root[data-theme="dark"] .post-content ul li::before {
+    filter: brightness(1.3);
+}
+
+:root[data-theme="dark"] .post-content blockquote {
+    background: linear-gradient(90deg, rgba(174, 213, 129, 0.15) 0%, transparent 100%);
+}

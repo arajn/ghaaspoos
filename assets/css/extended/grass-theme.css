@@ -1,0 +1,85 @@
+/* ============================================
+   GHAASPOOS LAWN THEME - Color Palette
+   Vibrant & Bold Green Theme
+   ============================================ */
+
+:root {
+    /* Background colors */
+    --theme: #f9fbe7;                    /* Cream with green tint */
+    --entry: #e8f5e9;                    /* Mint green cards */
+
+    /* Text colors */
+    --primary: #1b5e20;                  /* Deep forest green */
+    --secondary: #558b2f;                /* Medium grass green */
+    --tertiary: #7cb342;                 /* Bright lime accent */
+    --content: #2e7d32;                  /* Reading text */
+
+    /* UI elements */
+    --border: #a5d6a7;                   /* Soft green borders */
+    --code-block-bg: #1b5e20;            /* Dark green code blocks */
+    --code-bg: #e8f5e9;                  /* Light green inline code */
+
+    /* Custom lawn colors */
+    --grass-light: #c5e1a5;              /* Light grass */
+    --grass-medium: #8bc34a;             /* Medium grass */
+    --grass-dark: #558b2f;               /* Dark grass */
+    --grass-vibrant: #7cb342;            /* Vibrant lime */
+    --soil: #5d4037;                     /* Brown soil accent */
+    --sky: #e3f2fd;                      /* Light sky blue */
+}
+
+/* Dark Mode - Forest Night */
+:root[data-theme="dark"] {
+    --theme: #1b5e20;                    /* Deep forest background */
+    --entry: #2e7d32;                    /* Forest green cards */
+
+    --primary: #c5e1a5;                  /* Light lime text */
+    --secondary: #aed581;                /* Bright lime */
+    --tertiary: #9ccc65;                 /* Yellow-green accent */
+    --content: #dcedc8;                  /* Light green text */
+
+    --border: #4caf50;                   /* Green borders */
+    --code-block-bg: #0d3311;            /* Very dark green */
+    --code-bg: #2e7d32;                  /* Forest green code */
+
+    --grass-light: #aed581;
+    --grass-medium: #8bc34a;
+    --grass-dark: #689f38;
+    --grass-vibrant: #9ccc65;
+    --soil: #8d6e63;
+    --sky: #1b5e20;
+}
+
+/* ============================================
+   Base Styling Overrides
+   ============================================ */
+
+body {
+    background: var(--theme);
+    transition: background-color 0.3s ease;
+}
+
+/* Scrollbar - grass colored */
+::-webkit-scrollbar-track {
+    background: var(--theme);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--grass-medium);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--grass-dark);
+}
+
+/* Selection highlighting */
+::selection {
+    background: var(--grass-light);
+    color: var(--primary);
+}
+
+::-moz-selection {
+    background: var(--grass-light);
+    color: var(--primary);
+}

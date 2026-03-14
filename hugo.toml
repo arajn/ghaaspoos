@@ -6,6 +6,22 @@ theme = "PaperMod"
 [author]
   name = "Raj"
 
+[params]
+  defaultTheme = "light"
+  disableThemeToggle = false
+  description = "A fresh perspective on geopolitics, technology, and finance"
+
+  [params.assets]
+    theme_color = "#7cb342"
+    msapplication_TileColor = "#1b5e20"
+
+  [params.label]
+    text = "Ghaaspoos"
+
+  [params.homeInfoParams]
+    Title = "Welcome to Ghaaspoos"
+    Content = "Fresh insights on geopolitics, technology, and finance - like grass, always growing."
+
 [markup.goldmark.renderer]
   unsafe = true
 

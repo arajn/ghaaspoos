@@ -1,0 +1,177 @@
+/* ============================================
+   GHAASPOOS LAWN THEME - Grass Decorations
+   Decorative grass blade borders & effects
+   ============================================ */
+
+/* ============================================
+   Header - Grass hanging down
+   ============================================ */
+
+.nav {
+    position: relative;
+    background: linear-gradient(180deg, var(--grass-dark) 0%, var(--grass-medium) 100%);
+    box-shadow: 0 4px 20px rgba(27, 94, 32, 0.3);
+}
+
+.nav::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L5,0 L5,12 Q5,15 3,18 L2,20 L3,18 Q1,15 1,12 L1,0 Z' fill='%237cb342'/%3E%3Cpath d='M8,0 L13,0 L13,16 Q13,18 11,20 L10,20 L11,18 Q9,16 9,14 L9,0 Z' fill='%238bc34a'/%3E%3Cpath d='M15,0 L20,0 L20,10 Q20,13 18,15 L17,17 L18,15 Q16,12 16,10 L16,0 Z' fill='%2369a03a'/%3E%3Cpath d='M22,0 L27,0 L27,14 Q27,17 25,19 L24,20 L25,18 Q23,16 23,13 L23,0 Z' fill='%237cb342'/%3E%3Cpath d='M30,0 L35,0 L35,8 Q35,11 33,13 L32,15 L33,13 Q31,10 31,8 L31,0 Z' fill='%238bc34a'/%3E%3Cpath d='M38,0 L43,0 L43,15 Q43,17 41,19 L40,20 L41,18 Q39,16 39,14 L39,0 Z' fill='%2369a03a'/%3E%3Cpath d='M45,0 L50,0 L50,11 Q50,14 48,16 L47,18 L48,16 Q46,13 46,11 L46,0 Z' fill='%237cb342'/%3E%3Cpath d='M52,0 L57,0 L57,13 Q57,16 55,18 L54,20 L55,18 Q53,15 53,13 L53,0 Z' fill='%238bc34a'/%3E%3Cpath d='M60,0 L65,0 L65,9 Q65,12 63,14 L62,16 L63,14 Q61,11 61,9 L61,0 Z' fill='%2369a03a'/%3E%3Cpath d='M68,0 L73,0 L73,16 Q73,18 71,20 L70,20 L71,19 Q69,17 69,15 L69,0 Z' fill='%237cb342'/%3E%3Cpath d='M75,0 L80,0 L80,12 Q80,15 78,17 L77,19 L78,17 Q76,14 76,12 L76,0 Z' fill='%238bc34a'/%3E%3Cpath d='M83,0 L88,0 L88,14 Q88,17 86,19 L85,20 L86,18 Q84,16 84,13 L84,0 Z' fill='%2369a03a'/%3E%3Cpath d='M90,0 L95,0 L95,10 Q95,13 93,15 L92,17 L93,15 Q91,12 91,10 L91,0 Z' fill='%237cb342'/%3E%3Cpath d='M97,0 L100,0 L100,13 Q100,16 98,18 L97,20 L98,18 Q97,15 97,13 Z' fill='%238bc34a'/%3E%3C/svg%3E");
+    background-size: 100px 20px;
+    background-repeat: repeat-x;
+    z-index: 100;
+    animation: grassSway 3s ease-in-out infinite;
+}
+
+@keyframes grassSway {
+    0%, 100% { transform: scaleX(1); }
+    50% { transform: scaleX(1.02); }
+}
+
+/* Logo styling */
+.logo a {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+}
+
+/* Menu items */
+#menu a {
+    color: #e8f5e9 !important;
+    transition: all 0.3s ease;
+}
+
+#menu a:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Theme toggle button */
+#theme-toggle {
+    color: #e8f5e9;
+}
+
+/* ============================================
+   Footer - Grass growing up
+   ============================================ */
+
+.footer {
+    position: relative;
+    background: linear-gradient(0deg, var(--grass-dark) 0%, var(--grass-medium) 100%);
+    color: #e8f5e9;
+    padding-top: 40px !important;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    right: 0;
+    height: 25px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 25' preserveAspectRatio='none'%3E%3Cpath d='M0,25 L5,25 L5,10 Q5,6 3,3 L2,0 L3,3 Q1,6 1,10 L1,25 Z' fill='%237cb342'/%3E%3Cpath d='M8,25 L13,25 L13,7 Q13,4 11,1 L10,0 L11,2 Q9,5 9,8 L9,25 Z' fill='%238bc34a'/%3E%3Cpath d='M15,25 L20,25 L20,12 Q20,8 18,5 L17,2 L18,5 Q16,8 16,12 L16,25 Z' fill='%2369a03a'/%3E%3Cpath d='M22,25 L27,25 L27,8 Q27,4 25,1 L24,0 L25,2 Q23,5 23,9 L23,25 Z' fill='%237cb342'/%3E%3Cpath d='M30,25 L35,25 L35,14 Q35,10 33,7 L32,4 L33,7 Q31,10 31,14 L31,25 Z' fill='%238bc34a'/%3E%3Cpath d='M38,25 L43,25 L43,6 Q43,3 41,1 L40,0 L41,2 Q39,4 39,7 L39,25 Z' fill='%2369a03a'/%3E%3Cpath d='M45,25 L50,25 L50,11 Q50,7 48,4 L47,1 L48,4 Q46,7 46,11 L46,25 Z' fill='%237cb342'/%3E%3Cpath d='M52,25 L57,25 L57,9 Q57,5 55,2 L54,0 L55,3 Q53,6 53,10 L53,25 Z' fill='%238bc34a'/%3E%3Cpath d='M60,25 L65,25 L65,13 Q65,9 63,6 L62,3 L63,6 Q61,9 61,13 L61,25 Z' fill='%2369a03a'/%3E%3Cpath d='M68,25 L73,25 L73,5 Q73,2 71,0 L70,0 L71,1 Q69,3 69,6 L69,25 Z' fill='%237cb342'/%3E%3Cpath d='M75,25 L80,25 L80,10 Q80,6 78,3 L77,1 L78,3 Q76,6 76,10 L76,25 Z' fill='%238bc34a'/%3E%3Cpath d='M83,25 L88,25 L88,8 Q88,4 86,1 L85,0 L86,2 Q84,5 84,9 L84,25 Z' fill='%2369a03a'/%3E%3Cpath d='M90,25 L95,25 L95,12 Q95,8 93,5 L92,2 L93,5 Q91,8 91,12 L91,25 Z' fill='%237cb342'/%3E%3Cpath d='M97,25 L100,25 L100,9 Q100,5 98,2 L97,0 L98,3 Q97,6 97,10 Z' fill='%238bc34a'/%3E%3C/svg%3E");
+    background-size: 100px 25px;
+    background-repeat: repeat-x;
+    animation: grassSway 4s ease-in-out infinite reverse;
+}
+
+.footer a {
+    color: #c5e1a5 !important;
+}
+
+.footer a:hover {
+    color: #ffffff !important;
+}
+
+/* ============================================
+   Post Cards - Grass accents
+   ============================================ */
+
+.post-entry {
+    border-radius: 12px;
+    border: 2px solid var(--grass-light);
+    background: var(--entry);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.post-entry::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg,
+        var(--grass-dark) 0%,
+        var(--grass-vibrant) 50%,
+        var(--grass-dark) 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.post-entry:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(27, 94, 32, 0.2);
+    border-color: var(--grass-medium);
+}
+
+.post-entry:hover::before {
+    transform: scaleX(1);
+}
+
+/* ============================================
+   Scroll to Top Button
+   ============================================ */
+
+.top-link {
+    background: var(--grass-vibrant) !important;
+    border: 2px solid var(--grass-dark);
+    box-shadow: 0 4px 15px rgba(124, 179, 66, 0.4);
+}
+
+.top-link:hover {
+    background: var(--grass-dark) !important;
+    transform: translateY(-3px);
+}
+
+/* ============================================
+   Main Content Area
+   ============================================ */
+
+.main {
+    min-height: calc(100vh - 200px);
+}
+
+/* Page title styling */
+.page-header h1,
+.post-title {
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+@media (max-width: 768px) {
+    .nav::after {
+        height: 15px;
+        bottom: -15px;
+    }
+
+    .footer::before {
+        height: 20px;
+        top: -20px;
+    }
+
+    .footer {
+        padding-top: 30px !important;
+    }
+}
