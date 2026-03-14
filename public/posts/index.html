@@ -10,7 +10,7 @@
 <meta name="description" content="Posts - Ghaaspoos">
 <meta name="author" content="">
 <link rel="canonical" href="https://www.ghaaspoos.com/posts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.f09fc5cfed168b8d79bdfcfdb24fde525c85c3417e4ddcbce18141e0b0e7fc54.css" integrity="sha256-8J/Fz&#43;0Wi415vfz9sk/eUlyFw0F&#43;Tdy84YFB4LDn/FQ=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.ed5e983814da257ffdef72e91a1290a03978a318732f8eea2e17279816ec986d.css" integrity="sha256-7V6YOBTaJX/973LpGhKQoDl4oxhzL47qLhcnmBbsmG0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.ghaaspoos.com/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.ghaaspoos.com/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.ghaaspoos.com/favicon-32x32.png">
@@ -34,7 +34,36 @@
         document.querySelector("html").dataset.theme = 'dark';
     }
 
-</script><meta property="og:url" content="https://www.ghaaspoos.com/posts/">
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const logoLink = document.querySelector('.logo a');
+    if (logoLink) {
+        
+        const grassContainer = document.createElement('span');
+        grassContainer.className = 'logo-grass';
+
+        
+        for (let i = 0; i < 7; i++) {
+            const blade = document.createElement('span');
+            blade.className = 'grass-blade';
+            grassContainer.appendChild(blade);
+        }
+
+        
+        const textSpan = document.createElement('span');
+        textSpan.className = 'logo-text';
+        textSpan.textContent = 'GhaasPoos';
+
+        
+        logoLink.innerHTML = '';
+        logoLink.appendChild(grassContainer);
+        logoLink.appendChild(textSpan);
+    }
+});
+</script>
+<meta property="og:url" content="https://www.ghaaspoos.com/posts/">
   <meta property="og:site_name" content="Ghaaspoos">
   <meta property="og:title" content="Posts">
   <meta property="og:description" content="A fresh perspective on geopolitics, technology, and finance">

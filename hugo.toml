@@ -19,8 +19,8 @@ theme = "PaperMod"
     text = "Ghaaspoos"
 
   [params.homeInfoParams]
-    Title = "Welcome to Ghaaspoos"
-    Content = "Fresh insights on geopolitics, technology, and finance - like grass, always growing."
+    Title = "Ghaaspoos"
+    Content = "A common man's field of thought 🤔"
 
 [markup.goldmark.renderer]
   unsafe = true

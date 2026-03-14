@@ -1,0 +1,109 @@
+/* ============================================
+   GHAASPOOS - Animated Grass Logo
+   Grass grows from scratch, then text appears
+   ============================================ */
+
+/* Hide default logo text, use our animated version */
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none !important;
+}
+
+/* Animated grass container */
+.logo-grass {
+    display: inline-flex;
+    align-items: flex-end;
+    height: 30px;
+    margin-right: 5px;
+}
+
+/* Individual grass blades */
+.grass-blade {
+    width: 4px;
+    background: linear-gradient(to top, #2e7d32, #8bc34a, #c5e1a5);
+    border-radius: 2px 2px 0 0;
+    margin: 0 1px;
+    transform-origin: bottom center;
+    animation: growGrass 2s ease-out forwards;
+}
+
+.grass-blade:nth-child(1) { height: 20px; animation-delay: 0s; }
+.grass-blade:nth-child(2) { height: 28px; animation-delay: 0.1s; }
+.grass-blade:nth-child(3) { height: 18px; animation-delay: 0.2s; }
+.grass-blade:nth-child(4) { height: 25px; animation-delay: 0.15s; }
+.grass-blade:nth-child(5) { height: 22px; animation-delay: 0.25s; }
+.grass-blade:nth-child(6) { height: 30px; animation-delay: 0.1s; }
+.grass-blade:nth-child(7) { height: 16px; animation-delay: 0.3s; }
+
+@keyframes growGrass {
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+/* Logo text animation */
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff 0%, #c5e1a5 50%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInText 1s ease-out 1.5s forwards;
+    opacity: 0;
+    text-shadow: none;
+    letter-spacing: 1px;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sway animation on hover */
+.logo:hover .grass-blade {
+    animation: swayGrass 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes swayGrass {
+    0% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}
+
+/* Dark mode adjustments */
+:root[data-theme="dark"] .grass-blade {
+    background: linear-gradient(to top, #1b5e20, #4caf50, #8bc34a);
+}
+
+:root[data-theme="dark"] .logo-text {
+    background: linear-gradient(135deg, #c5e1a5 0%, #8bc34a 50%, #c5e1a5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Continuous subtle animation after initial load */
+.logo-grass {
+    animation: gentleSway 3s ease-in-out infinite 3s;
+}
+
+@keyframes gentleSway {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    75% { transform: rotate(-1deg); }
+}

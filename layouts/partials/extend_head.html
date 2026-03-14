@@ -1,0 +1,29 @@
+<!-- Animated Grass Logo Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Find the logo link
+    const logoLink = document.querySelector('.logo a');
+    if (logoLink) {
+        // Create animated grass container
+        const grassContainer = document.createElement('span');
+        grassContainer.className = 'logo-grass';
+
+        // Add grass blades
+        for (let i = 0; i < 7; i++) {
+            const blade = document.createElement('span');
+            blade.className = 'grass-blade';
+            grassContainer.appendChild(blade);
+        }
+
+        // Create text span
+        const textSpan = document.createElement('span');
+        textSpan.className = 'logo-text';
+        textSpan.textContent = 'GhaasPoos';
+
+        // Clear and rebuild logo
+        logoLink.innerHTML = '';
+        logoLink.appendChild(grassContainer);
+        logoLink.appendChild(textSpan);
+    }
+});
+</script>
