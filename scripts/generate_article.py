@@ -116,11 +116,12 @@ def create_post_file(title: str, content: str, category: str):
     now = datetime.now()
     date_str = now.strftime("%Y-%m-%dT%H:%M:%S-05:00")
 
-    # Create frontmatter
+    # Create frontmatter - escape single quotes in title
+    escaped_title = title.replace("'", "''")
     frontmatter = f"""+++
 date = '{date_str}'
 draft = false
-title = '{title.replace("'", "\\'")}'
+title = "{escaped_title}"
 tags = ['{category}']
 +++
 
