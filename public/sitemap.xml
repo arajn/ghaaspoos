@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.ghaaspoos.com/</loc>
-    <lastmod>2026-03-02T00:00:00+00:00</lastmod>
+    <loc>https://www.ghaaspoos.com/posts/geopolitics-a-chess-game/</loc>
+    <lastmod>2026-03-14T08:00:00-05:00</lastmod>
   </url><url>
-    <loc>https://www.ghaaspoos.com/posts/my-post/</loc>
-    <lastmod>2026-03-02T00:00:00+00:00</lastmod>
+    <loc>https://www.ghaaspoos.com/</loc>
+    <lastmod>2026-03-14T08:00:00-05:00</lastmod>
   </url><url>
     <loc>https://www.ghaaspoos.com/posts/</loc>
+    <lastmod>2026-03-14T08:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://www.ghaaspoos.com/posts/my-post/</loc>
     <lastmod>2026-03-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ghaaspoos.com/categories/</loc>
