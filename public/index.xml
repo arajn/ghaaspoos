@@ -2,17 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ghaaspoos</title>
-    <link>http://localhost:1313/</link>
+    <link>https://www.ghaaspoos.com/</link>
     <description>Recent content on Ghaaspoos</description>
     <generator>Hugo</generator>
-    <language>en-us</language><lastBuildDate>Sun, 01 Mar 2026 22:17:12 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><lastBuildDate>Mon, 02 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.ghaaspoos.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Sun, 01 Mar 2026 22:17:12 -0500</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description></description>
+      <title>My Post Title</title>
+      <link>https://www.ghaaspoos.com/posts/my-post/</link>
+      <pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.ghaaspoos.com/posts/my-post/</guid>
+      <description>&lt;!-- paste your HTML here --&gt;
+&lt;div class=&#34;my-content&#34;&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+&lt;head&gt;
+&lt;meta charset=&#34;UTF-8&#34;&gt;
+&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+&lt;title&gt;The Reckoning: AI, Power, and the Pentagon&lt;/title&gt;
+&lt;link rel=&#34;preconnect&#34; href=&#34;https://fonts.googleapis.com&#34;&gt;
+&lt;link href=&#34;https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=DM+Mono:wght@400;500&amp;display=swap&#34; rel=&#34;stylesheet&#34;&gt;
+&lt;style&gt;
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+&lt;p&gt;:root {
+&amp;ndash;ink: #1a1208;
+&amp;ndash;paper: #f5f0e8;
+&amp;ndash;aged: #e8dfc8;
+&amp;ndash;rust: #8b2500;
+&amp;ndash;gold: #a07820;
+&amp;ndash;slate: #4a5568;
+&amp;ndash;red-line: #c0392b;
+}&lt;/p&gt;
+&lt;p&gt;html { font-size: 18px; }&lt;/p&gt;
+&lt;p&gt;body {
+background: var(&amp;ndash;paper);
+color: var(&amp;ndash;ink);
+font-family: &amp;lsquo;Libre Baskerville&amp;rsquo;, Georgia, serif;
+line-height: 1.75;
+min-height: 100vh;
+background-image:
+radial-gradient(ellipse at 20% 10%, rgba(160,120,32,0.06) 0%, transparent 60%),
+radial-gradient(ellipse at 80% 90%, rgba(139,37,0,0.05) 0%, transparent 50%);
+}&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
