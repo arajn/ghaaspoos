@@ -1,0 +1,49 @@
+name: Auto-Publish Article
+
+on:
+  schedule:
+    # Run at 8 AM EST (13:00 UTC) - Morning article
+    - cron: '0 13 * * *'
+    # Run at 6 PM EST (23:00 UTC) - Evening article
+    - cron: '0 23 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  generate-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # Fetch PaperMod theme
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          pip install anthropic
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Generate article with Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python scripts/generate_article.py
+
+      - name: Commit and push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          git commit -m "Auto-publish: New article $(date +'%Y-%m-%d %H:%M')" || echo "No changes to commit"
+          git push
