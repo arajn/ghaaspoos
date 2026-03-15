@@ -1,7 +1,7 @@
 +++
 date = '2026-03-15T00:19:38+00:00'
 draft = false
-title = "Apple''s "AI Lag" Is Actually Ruthless Strategy"
+title = "Apple's AI Lag Is Actually Ruthless Strategy"
 tags = ['technology']
 audioFile = "/audio/apples-ai-lag-is-actually-ruthless-strategy.mp3"
 +++

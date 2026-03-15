@@ -150,8 +150,9 @@ def create_post_file(title: str, content: str, category: str):
     past_time = now.replace(hour=max(0, now.hour - 1))
     date_str = past_time.strftime("%Y-%m-%dT%H:%M:%S+00:00")
 
-    # Create frontmatter - escape single quotes in title
-    escaped_title = title.replace("'", "''")
+    # Create frontmatter - sanitize title for TOML
+    # Remove double quotes and normalize apostrophes to prevent TOML parsing errors
+    escaped_title = title.replace('"', '').replace("'", "'")
     frontmatter = f"""+++
 date = '{date_str}'
 draft = false
@@ -274,8 +275,9 @@ def create_post_file(title: str, content: str, category: str, audio_path: str | 
     past_time = now.replace(hour=max(0, now.hour - 1))
     date_str = past_time.strftime("%Y-%m-%dT%H:%M:%S+00:00")
 
-    # Create frontmatter - escape single quotes in title
-    escaped_title = title.replace("'", "''")
+    # Create frontmatter - sanitize title for TOML
+    # Remove double quotes and normalize apostrophes to prevent TOML parsing errors
+    escaped_title = title.replace('"', '').replace("'", "'")
 
     # Add audio path to frontmatter if available
     audio_line = f'\naudioFile = "{audio_path}"' if audio_path else ""
