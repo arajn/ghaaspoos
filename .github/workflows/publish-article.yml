@@ -61,4 +61,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add -A
           git commit -m "Auto-publish: New article $(date +'%Y-%m-%d %H:%M')" || echo "No changes to commit"
+          git pull --rebase origin main
           git push
