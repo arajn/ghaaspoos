@@ -26,63 +26,74 @@ TOPICS = [
     {
         "category": "geopolitics",
         "prompts": [
-            "Write about a current geopolitical shift or alliance forming between nations",
-            "Analyze a recent trade war, sanction, or economic conflict between countries",
-            "Discuss how a country is positioning itself strategically on the global stage",
-            "Explain the chess moves happening in a current international conflict or negotiation",
-            "Analyze the geopolitical implications of a recent energy or resource deal",
+            "Analyze a specific recent geopolitical alliance or partnership that is reshaping regional power. Name the countries, the deal, the dollar amounts, and explain who benefits and who loses. Draw a parallel to a historical alliance shift.",
+            "Pick a current trade war, sanction regime, or economic conflict between specific countries. Analyze the second and third-order effects that media isn't covering. Include specific trade volumes and economic data.",
+            "Analyze how a specific country (name it) is making a calculated strategic move on the global stage right now. What resources, alliances, or leverage are they using? What is their 5-year endgame?",
+            "Dissect a specific ongoing international conflict or negotiation. Map the key players, their hidden motivations, and predict the next three moves. Include historical context from a similar conflict.",
+            "Analyze a specific recent energy deal, resource agreement, or supply chain shift between named countries. Follow the money and explain the geopolitical implications that go beyond the headline.",
+            "Examine how a specific country is using economic warfare (debt traps, currency manipulation, trade leverage) to expand its influence. Name specific projects, amounts, and affected nations.",
         ]
     },
     {
         "category": "technology",
         "prompts": [
-            "Write about a breakthrough in AI and its implications for society",
-            "Analyze the tech cold war between major powers and its impact",
-            "Discuss how a new technology is disrupting an established industry",
-            "Explain the strategic importance of semiconductor supply chains",
-            "Analyze the race for quantum computing or space technology dominance",
+            "Analyze a specific recent AI development (name the company, the product, the date) and its second-order implications for power, labor, and geopolitics. Go beyond the press release.",
+            "Dissect the tech cold war between the US and China in a specific domain (chips, AI, quantum, space). Include specific sanctions, company names, dollar amounts, and explain who is actually winning.",
+            "Analyze how a specific new technology or product launch is about to disrupt an established industry. Name the incumbents who will be destroyed and the upstarts who will benefit. Include market size data.",
+            "Deep-dive into the semiconductor supply chain — pick a specific chokepoint (ASML, TSMC, rare earth minerals) and explain why it matters more than people think. Include specific production numbers.",
+            "Analyze a specific big tech company's recent strategic move (acquisition, pivot, product kill) and decode what it really signals about their long-term strategy. Follow the money.",
+            "Examine the race for a specific emerging technology (quantum computing, nuclear fusion, space mining, brain-computer interfaces). Who is funding it, how much, and what is the real strategic endgame?",
         ]
     },
     {
         "category": "finance",
         "prompts": [
-            "Analyze a major market shift and what smart money is doing",
-            "Write about central bank policies and their hidden implications",
-            "Discuss how institutional investors are positioning for the future",
-            "Explain a complex financial instrument or strategy in simple terms",
-            "Analyze the intersection of geopolitics and financial markets",
+            "Analyze a specific recent market shift or anomaly. What are hedge funds and institutional investors doing that retail investors don't see? Include specific fund names, positions, and dollar amounts where possible.",
+            "Dissect a specific recent central bank decision (name the bank, the date, the rate). Explain the hidden implications that go beyond the headline number. What signal is being sent?",
+            "Analyze how specific institutional investors (name the firms) are repositioning their portfolios right now. What sectors are they rotating into/out of and why? Include AUM and allocation data.",
+            "Take a complex financial instrument or strategy (credit default swaps, carry trades, structured products) and explain how it is being used right now to create or transfer wealth. Use a specific current example.",
+            "Analyze a specific intersection of geopolitics and financial markets — how a political event is creating arbitrage opportunities, risk repricing, or capital flows that smart money is exploiting.",
+            "Examine a specific currency, commodity, or asset class that is mispriced right now. Explain the fundamental disconnect, who benefits from the mispricing, and what would cause a repricing event.",
         ]
     }
 ]
 
 SYSTEM_PROMPT = """
-Role: You are a contrarian, razor-sharp strategic analyst who writes high-impact blog posts. You do not just report the news; you decode the hidden mechanics behind it.
+Role: You are the lead analyst at Ghaaspoos, a strategic intelligence publication. You are a contrarian, razor-sharp strategic analyst who writes high-impact, deeply researched blog posts. You do not just report the news — you decode the hidden mechanics, trace the money, and expose the power dynamics behind it.
+
+You are writing for an audience of informed professionals — business leaders, investors, policy wonks, and curious minds who want to understand how the world actually works.
 
 Strict Formatting and Stylistic Rules:
 
-    1.Pacing (Direct & Punchy): Cut the fluff. Use short, punchy paragraphs (maximum 2-3 sentences each). Start with impactful, definitive statements. No passive voice.
+    1. Pacing (Direct & Punchy): Cut the fluff. Use short, punchy paragraphs (maximum 2-3 sentences each). Start with impactful, definitive statements. No passive voice.
 
-    2.Depth (Analytical): Look entirely past the PR headlines. Tell me the real story playing out beneath the surface. What is the mainstream media missing?
+    2. Depth (Analytical & Research-Heavy): Look entirely past the PR headlines. Tell me the real story playing out beneath the surface. Cite specific numbers, dates, deal values, named sources, and historical precedents. What is the mainstream media missing? Make claims that are verifiable.
 
-    3.The Dichotomy ("Rich Dad vs. Poor Dad" Framing): Explicitly contrast the amateur, surface-level reaction with the deep, strategic reality. (e.g., "The novice sees [X], but the strategist knows this is actually about [Y].")
+    3. The Dichotomy ("Rich Dad vs. Poor Dad" Framing): Explicitly contrast the amateur, surface-level reaction with the deep, strategic reality. (e.g., "The novice sees [X], but the strategist knows this is actually about [Y].")
 
-    4.The Board (Chess Metaphor): Map this situation to a chessboard. Who is playing white and forcing the action? Who is stuck playing black and reacting? What is the hidden endgame or the next three moves?
+    4. The Board (Chess Metaphor): Map this situation to a chessboard. Who is playing white and forcing the action? Who is stuck playing black and reacting? What is the hidden endgame or the next three moves?
 
-    5.The Motive ("What's in it for them?"): Follow the money and power. Aggressively analyze the hidden motivations and incentives of the key players. Answer the question: Why does this actually benefit them behind closed doors?
+    5. The Motive ("What's in it for them?"): Follow the money and power. Aggressively analyze the hidden motivations and incentives of the key players. Answer the question: Why does this actually benefit them behind closed doors?
 
-    Output: Give me a compelling title, followed by the blog post. Ensure the tone is authoritative, cynical yet objective, and highly engaging.
+    6. Historical Context: Draw parallels to at least one historical precedent. How has a similar pattern played out before? What can we learn from it?
+
+    7. Original Analysis: Include at least one insight, framework, or connection that the reader will NOT find in mainstream coverage. This is your edge — make the reader feel like they're getting insider-level strategic intelligence.
 
 Your articles should:
-- Be 500-700 words
-- Have a compelling hook in the first paragraph
+- Be 1000-1500 words (this is important — go deep, not shallow)
+- Have a compelling, provocative hook in the first paragraph that makes the reader stop scrolling
+- Use clear section headers (## Header) to break up the analysis
 - Include section breaks (---) between major points
-- End with a thought-provoking conclusion
+- Include specific data points: dollar amounts, percentages, dates, names of key players
+- Reference at least one historical parallel or precedent
+- End with a forward-looking "What to Watch" section — specific signals the reader should monitor
 - Use **bold** for emphasis on key points
 - Use *italics* for quotes or contrasting perspectives
 
 Do NOT include a title - that will be added separately.
 Do NOT use generic phrases like "In conclusion" or "To summarize".
-Write as if you're explaining complex moves on a chess board to someone who wants to understand power dynamics."""
+Do NOT be vague. Every claim should be backed by a specific detail.
+Write as if you're briefing a room of strategic advisors who need to make decisions based on your analysis."""
 
 def generate_article():
     """Generate a new article using Claude API."""
@@ -106,11 +117,11 @@ def generate_article():
     # Generate the article content
     response = client.messages.create(
         model="claude-sonnet-4-20250514",
-        max_tokens=2000,
+        max_tokens=4000,
         messages=[
             {
                 "role": "user",
-                "content": f"{prompt}\n\nWrite this as a blog article. Focus on recent events or developments that readers would find relevant and insightful."
+                "content": f"{prompt}\n\nWrite this as a deep-dive blog article for Ghaaspoos. Focus on recent, specific events with named players, real numbers, and verifiable details. The reader should walk away feeling like they understand something the mainstream media hasn't explained. Remember: 1000-1500 words minimum, with a 'What to Watch' section at the end."
             }
         ],
         system=SYSTEM_PROMPT

@@ -22,6 +22,26 @@ theme = "PaperMod"
     Title = "Ghaaspoos"
     Content = "A common man's field of thought 🤔"
 
+[[menus.main]]
+  name = "About"
+  url = "/about/"
+  weight = 10
+
+[[menus.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 20
+
+[[menus.main]]
+  name = "Privacy"
+  url = "/privacy/"
+  weight = 30
+
+[[menus.main]]
+  name = "Terms"
+  url = "/terms/"
+  weight = 40
+
 [markup.goldmark.renderer]
   unsafe = true
 
