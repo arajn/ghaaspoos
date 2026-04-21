@@ -2,10 +2,8 @@ name: Auto-Publish Article
 
 on:
   schedule:
-    # Run at 8 AM EST (13:00 UTC) - Morning article
+    # Run at 8 AM EST (13:00 UTC) - Daily article
     - cron: '0 13 * * *'
-    # Run at 6 PM EST (23:00 UTC) - Evening article
-    - cron: '0 23 * * *'
   workflow_dispatch:
     inputs:
       topic:
